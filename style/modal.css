@@ -169,18 +169,77 @@ main {
   background-color: rgba(26, 39, 156, 0.4);
 }
 
+.formValidation {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  overflow: auto;
+  background-color: rgba(26, 39, 156, 0.4);
+}
+
+@media screen and (max-width: 800px) {
+  .formValidation {
+    padding: 0 10px;
+  }
+} 
+
 .content {
   margin: 5% auto;
   width: 100%;
   max-width: 500px;
-  animation-name: modalopen;
-  animation-duration: var(--modal-duration);
+  animation: modalopen var(--modal-duration);
   background: #232323;
   border-radius: 10px;
   overflow: hidden;
   position: relative;
   color: #fff;
   padding-top: 10px;
+}
+
+.contentValidation {
+  position: absolute;
+  top: 30%;
+  margin: auto;
+  width: 100%;
+  max-width: 500px;
+  animation: validationopen var(--modal-duration) ease-in;
+  text-align: center;
+  background: #31b82f;
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+  color: #fff;
+  padding: 20px;
+}
+
+.closeValidation {
+  position: absolute;
+  right: 5px;
+  top: 5px;
+  width: 32px;
+  height: 32px;
+  opacity: 1;
+  cursor: pointer;
+  transform: scale(0.7);
+}
+.closeValidation:before,
+.closeValidation:after {
+  position: absolute;
+  left: 15px;
+  content: " ";
+  height: 33px;
+  width: 3px;
+  background-color: #fff;
+}
+.closeValidation:before {
+  transform: rotate(45deg);
+}
+.closeValidation:after {
+  transform: rotate(-45deg);
 }
 
 .modal-body {
@@ -220,6 +279,7 @@ input {
   opacity: 0;
   transition: 0.3s;
 }
+
 .formData[data-error-visible="true"]::after {
   opacity: 1;
 }
@@ -526,4 +586,3 @@ footer {
     opacity: 1;
   }
 }
-
