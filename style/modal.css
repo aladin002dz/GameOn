@@ -87,6 +87,9 @@ img {
     display: block;
     text-align: left;
   }
+  .topnav.topnav.responsive a:first-child {
+    margin-top: 40px;
+  }
 }
 
 
@@ -250,12 +253,7 @@ input {
 .formData[data-error-visible="true"] .text-control {
   border: 2px solid #e54858;
 }
-/* 
-input[data-error]::after {
-    content: attr(data-error);
-    font-size: 0.4em;
-    color: red;
-} */
+
 .checkbox-label,
 .checkbox2-label {
   position: relative;
@@ -546,7 +544,7 @@ footer {
     padding: 12px 35px;
   }
   .copyrights {
-    margin-top: -100px;
+    margin-top: 0px;
     text-align: center;
   }
   .content {
