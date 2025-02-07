@@ -4,4 +4,4 @@
 3. Il n'y a aucune dépendance ;
 4. Vous ne devez utiliser que du CSS personnalisé et du JavaScript pur, sans jQuery, Bootstrap ou autre librairie.
 
-Parcours : CDA JS/React Openclassrooms
+Parcours : CDA JS/React Openclassrooms (P4)
